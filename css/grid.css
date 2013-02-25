@@ -1,0 +1,128 @@
+/* Grid
+================================================== */
+.content-wrap                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+.column, .columns                              { position: relative; float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+.row                                           { margin-bottom: 20px; }
+
+/* Nested Column Classes*/
+.column.first, .columns.first                  { margin-left: 0; }
+.column.last, .columns.last                    { margin-right: 0; }
+
+/* Base Grid */
+.content-wrap .one.column                      { width: 140px; }
+.content-wrap .two.columns                     { width: 300px; }
+.content-wrap .three.columns                   { width: 460px; }
+.content-wrap .four.columns                    { width: 620px; }
+.content-wrap .five.columns                    { width: 780px; }
+.content-wrap .six.columns                     { width: 940px; }
+
+/* Offsets */
+.content-wrap .offset-by-one                   { padding-left: 160px; }
+.content-wrap .offset-by-two                   { padding-left: 320px; }
+.content-wrap .offset-by-three                 { padding-left: 480px; }
+.content-wrap .offset-by-four                  { padding-left: 640px; }
+.content-wrap .offset-by-five                  { padding-left: 800px; }
+
+/* Grid for 768px width */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .content-wrap                                  { width: 768px; }
+  .content-wrap .column,
+  .content-wrap .columns                         { margin-left: 10px; margin-right: 10px;  }
+  .column.first, .columns.first                  { margin-left: 0; margin-right: 10px; }
+  .column.last, .columns.last                    { margin-right: 0; margin-left: 10px; }
+
+  .content-wrap .one.column                      { width: 108px; }
+  .content-wrap .two.columns                     { width: 236px; }
+  .content-wrap .three.columns                   { width: 364px; }
+  .content-wrap .four.columns                    { width: 492px; }
+  .content-wrap .five.columns                    { width: 620px; }
+  .content-wrap .six.columns                     { width: 748px; }
+
+  /* Offsets */
+  .content-wrap .offset-by-one                   { padding-left: 128px; }
+  .content-wrap .offset-by-two                   { padding-left: 266px; }
+  .content-wrap .offset-by-three                 { padding-left: 384px; }
+  .content-wrap .offset-by-four                  { padding-left: 512px; }
+  .content-wrap .offset-by-five                  { padding-left: 640px; }
+}
+
+
+/* Mobile Portrait
+================================================== */
+
+/* Grid for 320px width */
+@media only screen and (max-width: 767px) {
+  .content-wrap { width: 280px; }
+  .columns, .column { margin: 0; }
+
+  .content-wrap .one.column,
+  .content-wrap .two.columns,
+  .content-wrap .three.columns,
+  .content-wrap .four.columns,
+  .content-wrap .five.columns,
+  .content-wrap .six.columns  { width: 280px; }
+
+  /* Offsets */
+  .content-wrap .offset-by-one,
+  .content-wrap .offset-by-two,
+  .content-wrap .offset-by-three,
+  .content-wrap .offset-by-four,
+  .content-wrap .offset-by-five { padding-left: 0; }
+
+}
+
+
+/* Mobile Landscape
+================================================== */
+
+    /* Note: Design for a width of 480px */
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .content-wrap { width: 420px; }
+        .columns, .column { margin: 0; }
+
+        .content-wrap .one.column,
+        .content-wrap .two.columns,
+        .content-wrap .three.columns,
+        .content-wrap .four.columns,
+        .content-wrap .five.columns,
+        .content-wrap .six.columns { width: 420px; }
+    }
+
+
+/* Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .content-wrap:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+
+
