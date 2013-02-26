@@ -92,7 +92,7 @@
 ================================================== */
 .item {
   margin: 3px 0;
-  padding: 120px 0;
+  padding: 120px 0 30px;
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
 }
 .item h2 {
@@ -141,6 +141,11 @@
 #techcrunch,
 #techcrunch h2 {
   background-color: #1ebc00;
+}
+.screenshot {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 960px;
 }
 
 /* Buttons
