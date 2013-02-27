@@ -91,7 +91,7 @@
 /* Items
 ================================================== */
 .item {
-  padding: 120px 0 30px;
+  padding: 120px 0 100px;
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
 }
 .item h2 {
